@@ -1,0 +1,21 @@
+/*html, body, header, div, h1, h2, h3, h4, form, ul, li, input, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: content-box;
+  display: block;
+  background-color: inherit;
+  font-size: 1rem;
+  font-family: lato-regular, sans-serif;
+  -webkit-appearance: none;
+}*/
+
+
+* { padding: 0; margin: 0; }
+canvas {
+  background: #eee;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
