@@ -3,13 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Brood</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
     <link rel="stylesheet" href="../assets/stylesheets/application.css" />
   </head>
   <body>
-    <div class="frame">
-      <canvas id="brood-canvas" width="480" height="320"></canvas>
-    <div>
-    <script type="text/javascript" src="bundle.js" charset="utf-8"></script>
+    <!-- <div class="loading bar"></div> -->
+    <span class="game">
+      <div class="page-header">
+        <div class="title">Brood</div>
+        <div class="subtitle">Play. Fight. Survive.</div>
+      </div>
 
+
+      <div class="frame">
+        <div class="score-info">
+          <div class="score" id="player-score">Your score: 0</div>
+          <div class="score" id="high-score">High score: 0</div>
+        </div>
+        <canvas id="brood-canvas" width="800" height="800"></canvas>
+      <div>
+
+      <script type="text/javascript" src="bundle.js" charset="utf-8"></script>
+    <span>
   </body>
+  <script>
+  </script>
 </html>
