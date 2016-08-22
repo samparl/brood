@@ -5,12 +5,14 @@
     <title>Brood</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
     <link rel="stylesheet" href="../assets/stylesheets/application.css" />
+    <link rel="stylesheet" href="../assets/fonts/font-awesome-4.6.3/css/font-awesome.min.css">
   </head>
   <body>
     <!-- <div class="loading bar"></div> -->
     <span class="game">
       <div class="page-header">
         <div class="title">Brood</div>
+        <img src="../assets/images/aliens/green/Smiley_green_alien_aaah.svg" class="logo" />
         <div class="subtitle">Play. Fight. Survive.</div>
       </div>
 
@@ -20,7 +22,9 @@
           <div class="score" id="player-score">Your score: 0</div>
           <div class="score" id="high-score">High score: 0</div>
         </div>
-        <canvas id="brood-canvas" width="800" height="800"></canvas>
+        <div id="play">
+          <canvas id="brood-canvas" width="800" height="800"></canvas>
+        </div>
       <div>
 
       <script type="text/javascript" src="bundle.js" charset="utf-8"></script>

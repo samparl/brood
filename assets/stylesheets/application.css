@@ -1,5 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Fredericka+the+Great';
 @import 'https://fonts.googleapis.com/css?family=Crimson+Text';
+/*@import 'fonts/font-awesome-4.6.3/css'*/
 
 html, body, header, div, h1, h2, h3, h4, form, ul, li, input, button {
   margin: 0;
@@ -11,127 +12,6 @@ html, body, header, div, h1, h2, h3, h4, form, ul, li, input, button {
   font-size: 1rem;
   font-family: inherit;
   -webkit-appearance: none;
-}
-
-
-.loading{
-   width:100px;
-   height:100px;
-   margin:30px auto;
-   position:relative;
-}
-
-.loading.bar div{
-  width: 10px;
-  height: 30px;
-  background: black;
-  position: absolute;
-  top: 35px;
-  left: 45px;
-  opacity:0.05;
-  -webkit-animation: fadeit 1.1s linear infinite;
-  -moz-animation: fadeit 1.1s linear infinite;
-  animation: fadeit 1.1s linear infinite;
-
-  div:nth-child(1) {
-    -webkit-transform: rotate(0deg) translate(0, -30px);
-    -moz-transform: rotate(0deg) translate(0, -30px);
-    transform: rotate(0deg) translate(0, -30px);
-    -webkit-animation-delay:0.39s;
-    -moz-animation-delay:0.39s;
-    animation-delay:0.39s;
-  }
-
-  div:nth-child(2) {
-    -webkit-transform: rotate(45deg) translate(0, -30px);
-    -moz-transform: rotate(45deg) translate(0, -30px);
-    transform: rotate(45deg) translate(0, -30px);
-    -webkit-animation-delay:0.52s;
-    -moz-animation-delay:0.52s;
-    animation-delay:0.52s;
-  }
-
-  div:nth-child(3) {
-    -webkit-transform: rotate(90deg) translate(0, -30px);
-    -moz-transform: rotate(90deg) translate(0, -30px);
-    transform: rotate(90deg) translate(0, -30px);
-    -webkit-animation-delay:0.65s;
-    -moz-animation-delay:0.65s;
-    animation-delay:0.65s;
-  }
-
-  div:nth-child(4) {
-    -webkit-transform: rotate(135deg) translate(0, -30px);
-    -moz-transform: rotate(135deg) translate(0, -30px);
-    transform: rotate(135deg) translate(0, -30px);
-    -webkit-animation-delay:0.78s;
-    -moz-animation-delay:0.78s;
-    animation-delay:0.78s;
-  }
-
-  div:nth-child(5) {
-    -webkit-transform: rotate(180deg) translate(0, -30px);
-    -moz-transform: rotate(180deg) translate(0, -30px);
-    transform: rotate(180deg) translate(0, -30px);
-    -webkit-animation-delay:0.91s;
-    -moz-animation-delay:0.91s;
-    animation-delay:0.91s;
-  }
-
-  div:nth-child(6) {
-    -webkit-transform: rotate(225deg) translate(0, -30px);
-    -moz-transform: rotate(225deg) translate(0, -30px);
-    transform: rotate(225deg) translate(0, -30px);
-
-    -webkit-animation-delay:1.04s;
-    -moz-animation-delay:1.04s;
-    animation-delay:1.04s;
-  }
-
-  div:nth-child(7) {
-    -webkit-transform: rotate(270deg) translate(0, -30px);
-    -moz-transform: rotate(270deg) translate(0, -30px);
-    transform: rotate(270deg) translate(0, -30px);
-
-    -webkit-animation-delay:1.17s;
-    -moz-animation-delay:1.17s;
-    animation-delay:1.17s;
-  }
-
-  div:nth-child(8) {
-    -webkit-transform: rotate(315deg) translate(0, -30px);
-    -moz-transform: rotate(315deg) translate(0, -30px);
-    transform: rotate(315deg) translate(0, -30px);
-
-    -webkit-animation-delay:1.3s;
-    -moz-animation-delay:1.3s;
-    animation-delay:1.3s;
-  }
-}
-
-@-webkit-keyframes fadeit{
-     0%{
-          opacity:1;
-     }
-     100%{
-          opacity:0;
-     }
-}
-@-moz-keyframes fadeit{
-     0%{
-          opacity:1;
-     }
-     100%{
-          opacity:0;
-     }
-}
-@keyframes fadeit{
-     0%{
-          opacity:1;
-     }
-     100%{
-          opacity:0;
-     }
 }
 
 body {
@@ -155,9 +35,40 @@ canvas {
   border: 1px solid #000;
 }
 
+.replay {
+  display:flex;
+  flex-direction: column;
+  position: absolute;;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font: inherit;
+  font-size: 2rem;
+  height: 50%;
+  width: 50%;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  background-image: url("../images/grunge_background.jpg");
+
+  .fa {
+    font-size: 3rem;
+    margin: auto;
+  }
+}
+
+#play {
+  height: inherit;
+  width: inherit;
+  border: 1px solid #000;
+}
+
 .frame {
-  height: 30rem;
-  width: 30rem;
+  position: relative;
+  height: 20rem;
+  width: 20rem;
   margin: 0 auto;
   border: 1px solid #000;
 }
@@ -176,6 +87,11 @@ canvas {
 
 .subtitle {
   margin: 0 auto;
+}
+
+.logo {
+  filter: hue-rotate(90deg);
+  -webkit-filter: hue-rotate(90deg);
 }
 
 .score-info {
