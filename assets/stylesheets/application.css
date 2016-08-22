@@ -67,8 +67,8 @@ canvas {
 
 .frame {
   position: relative;
-  height: 20rem;
-  width: 20rem;
+  height: 30rem;
+  width: 30rem;
   margin: 0 auto;
   border: 1px solid #000;
 }
