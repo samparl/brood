@@ -44,3 +44,10 @@ Gameplay modals:
 * Start game
 * You win!
 * Try again!
+
+Known Issues/Future Additions:
+* Alien does not register with neighbors when striking the ceiling first.
+* Alien needs to not lock onto aliens below it.
+* Move staged alien up for visibility
+* Stage second alien.
+* Change alien images.
