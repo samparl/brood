@@ -1,34 +1,51 @@
 @import 'https://fonts.googleapis.com/css?family=Fredericka+the+Great';
 @import 'https://fonts.googleapis.com/css?family=Crimson+Text';
-/*@import 'fonts/font-awesome-4.6.3/css'*/
+/*@import 'fonts/font-awesome-4.6.3/css';*/
 
-html, body, header, div, h1, h2, h3, h4, form, ul, li, input, button {
+html, body, header, div, h1, h2, h3, h4, form, ul, li, a, i, input, button {
+  margin: 0;
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: content-box;
   display: block;
   background-color: inherit;
-  font-size: 1rem;
-  font-family: inherit;
+  /*font-size: 1rem;
+  font-family: inherit;*/
+  font: inherit;
+  color: inherit;
+  list-style: none;
+  text-decoration: none;
   -webkit-appearance: none;
+}
+
+html {
+  height: 100%;
 }
 
 body {
   font-family: 'Crimson Text', serif;
+  color: #000;
   /*background-image: url("../images/grunge_background.jpg");*/
+  text-decoration: inherit;
+  background-color: black;
+  /*display: flex;*/
+  height: inherit;
 }
 
 .game {
-  border: 5rem solid #000;
+  border: 1rem solid #000;
+  background-color: #fff;
+  border-radius: 2rem;
   box-sizing: content-box;
   display: flex;
   flex-direction: column;
-  border-image: url("../images/grunge_border.jpg") 1000;
+  /*margin:auto;*/
+  /*border-image: url("../images/grunge_border.jpg") 1000;*/
 }
 
 canvas {
-  background-image: url("../images/ruined_city.jpg");
+  /*background-image: url("../images/ruined_city.jpg");*/
   display: block;
   height: inherit;
   width: inherit;
@@ -52,44 +69,82 @@ canvas {
   border: 1px solid #000;
   border-radius: 0.5rem;
   background-image: url("../images/grunge_background.jpg");
+}
 
-  .fa {
-    font-size: 3rem;
-    margin: auto;
-  }
+.fa {
+  font-size: 3rem;
+  margin: auto;
 }
 
 #play {
-  height: inherit;
-  width: inherit;
-  border: 1px solid #000;
+  height: 500px;
+  width: 500px;
+  border: 0.5rem solid #000;
+  border-radius: 3rem;
+  overflow: hidden;
+  position:relative;
 }
 
 .frame {
   position: relative;
-  height: 30rem;
-  width: 30rem;
+  height: auto;
+  width: auto;
   margin: 0 auto;
-  border: 1px solid #000;
+  /*border: 1px solid #000;*/
 }
 
 .page-header {
   margin: 0 auto 2rem auto;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
-.title {
+.page-header .title {
   font-family: 'Fredericka the Great', cursive;
   font-size: 4rem;
   margin: 0 auto;
 }
 
-.subtitle {
+.page-header .subtitle {
   margin: 0 auto;
 }
 
-.logo {
+.author-info {
+  display: flex;
+  /*flex-direction: row;*/
+  padding-right: 3rem;
+  justify-content: space-between;
+}
+
+.author-info i {
+  font-size: 2rem;
+}
+
+.author-info li {
+  flex-basis: 1;
+  margin: auto;
+}
+
+.author-info a {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.author-info a .image-border {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.author-info img {
+  height: 3rem;
+  width: auto;
+}
+
+.page-header .logo {
   filter: hue-rotate(90deg);
   -webkit-filter: hue-rotate(90deg);
 }
@@ -97,6 +152,7 @@ canvas {
 .score-info {
   display: flex;
   flex-direction: row;
+  margin: 0 3rem;
   font-family: 'Fredericka the Great', cursive;
 }
 
@@ -106,4 +162,13 @@ canvas {
 
 #player-score {
   flex: 1
+}
+
+.page-footer {
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: auto;
+  margin-left: auto;
 }
