@@ -26,10 +26,20 @@ In its minimal form, this game will include:
 5.  The accumulation of points per alien kill.
 6.  The endgame scenario when no aliens remain attached to the ceiling.
 
-Technical Challenges and Solutions
-This game will largely make use of JavaScript, CSS, Canvas, and HTML with React and
-Flux components. Flux loops will be used to communicate with each alien when it
-has been hit, and when they should be destroyed.
+Technical Implementation
+This game makes use of JavaScript, CSS, Canvas, and HTML with some jQuery.
+
+Aliens position themselves as hexagons relative to each other and the top of the screen, while relying on the interior circle's area to test for collision.
+
+The user can alternate between the structural view of the game, to observe the fundamental game logic, and the graphical alien view by clicking the check box marked "Structural View" beneath the game screen.
+
+Aliens are passed through a staging array and three hashes throughout their life-cycles:
+
+1. movingAliens
+2. hangingAliens
+3. deadAliens
+
+Each category follows its own logic for rendering and collision testing purposes. For example, all aliens except those in the staging array are rendered at y-axis values relative to the falling night sky. Only movingAliens and hangingAliens are tested for collision against one another.
 
 Implementation Timeline
 Day 1
@@ -44,10 +54,3 @@ Gameplay modals:
 * Start game
 * You win!
 * Try again!
-
-Known Issues/Future Additions:
-* Alien does not register with neighbors when striking the ceiling first.
-* Alien needs to not lock onto aliens below it.
-* Move staged alien up for visibility
-* Stage second alien.
-* Change alien images.
