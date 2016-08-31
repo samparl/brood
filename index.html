@@ -5,35 +5,50 @@
     <title>Brood</title>
     <link rel="stylesheet" href="assets/stylesheets/application.css" />
     <link rel="stylesheet" href="assets/fonts/font-awesome-4.6.3/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
   </head>
   <body>
     <!-- <div class="loading bar"></div> -->
     <span class="game">
       <ul class="author-info">
-        <!-- <li><p>Find out more about the author!</p></li> -->
-        <!-- <a class="image-border"><img src="assets/images/profile.jpg"/></a> -->
         <li><a href="http://www.samaparl.com"><i class="fa fa-user" aria-hidden="true"></i></a></li>
         <li><a href="https://github.com/samparl"><i class="fa fa-github" aria-hidden="true"></i></a></li>
         <li><a href="https://www.linkedin.com/in/sam-parl-6a3a4040"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
       </ul>
+
       <div class="page-header">
         <div class="title">Brood</div>
         <img src="assets/images/aliens/green/Smiley_green_alien_aaah.svg" class="logo" />
         <div class="subtitle">Play. Fight. Survive.</div>
+        <button id="high-scores">High Scores</button>
       </div>
 
-
-      <div class="frame">
+      <div
+      id="firebaseui-auth-container"
+      class="frame">
         <div class="score-info">
           <div class="score"><div>Round respect:&nbsp;</div><div id="round-score">0</div></div>
           <div class="score"><div>Total respect:&nbsp;</div><div id="total-score">0</div></div>
         </div>
         <div id="play">
+          <div
+            class='replay'
+            width=${canvas.width}
+            height=${canvas.height}>
+            <div class="replay-message"></div>
+            <i class="fa fa-refresh" aria-hidden="true"></i>
+            <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Sign in with Google</button>
+            </div>
           <canvas id="brood-canvas" width="600" height="700"></canvas>
         </div>
       <div>
         <label><input type="checkbox" id="view-style">Structural View</input></label>
+        <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="main-auth-button">Sign in with Google</button>
+
       <script type="text/javascript" src="lib/bundle.js" charset="utf-8"></script>
 
     </span>
@@ -63,8 +78,6 @@
 
     <div class="page-footer">
       <ul class="author-info">
-        <!-- <li><p>Find out more about the author!</p></li> -->
-        <!-- <a class="image-border"><img src="assets/images/profile.jpg"/></a> -->
         <li><a href="http://www.samaparl.com"><i class="fa fa-user" aria-hidden="true"></i></a></li>
         <li><a href="https://github.com/samparl"><i class="fa fa-github" aria-hidden="true"></i></a></li>
         <li><a href="https://www.linkedin.com/in/sam-parl-6a3a4040"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
