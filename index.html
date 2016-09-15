@@ -12,22 +12,32 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
   </head>
   <body>
-    <!-- <div class="loading bar"></div> -->
     <span class="game">
       <ul class="author-info">
-        <!-- <li><a href="http://www.samaparl.com"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-        <li><a href="https://github.com/samparl"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/sam-parl-6a3a4040"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li> -->
-        <li><button class="mdl-button mdl-js-button mdl-button--raised" id="high-scores">About the game</button></li>
-        <li><button disabled class="mdl-button mdl-js-button mdl-button--raised" id="main-auth-button">Sign in to save your score</button></li>
-
+        <li class="logo">
+          <div class="header-container">
+            <img src="assets/images/aliens/green/Smiley_green_alien_aaah.svg" class="logo" />
+            <div class="subtitle">Play. Fight. Survive.</div>
+          </div>
+          <div />
+        </li>
+        <li>
+          <div class="header-container">
+            <div class="title">Brood</div>
+            <button
+              class="mdl-button mdl-js-button mdl-button--raised"
+              id="high-scores">About the game</button>
+          </div>
+        </li>
+        <li>
+          <div class="header-container">
+            <div />
+            <button disabled
+              class="mdl-button mdl-js-button mdl-button--raised"
+              id="main-auth-button">Sign in to save your score</button>
+          </div>
+        </li>
       </ul>
-
-      <div class="page-header">
-        <div class="title">Brood</div>
-        <img src="assets/images/aliens/green/Smiley_green_alien_aaah.svg" class="logo" />
-        <div class="subtitle">Play. Fight. Survive.</div>
-      </div>
 
       <div
       id="firebaseui-auth-container"
@@ -38,14 +48,12 @@
         </div>
         <div id="play">
           <div
-            class='replay'
-            width=${canvas.width}
-            height=${canvas.height}>
+            class='replay'>
             <div class="replay-message"></div>
             <i class="fa fa-refresh" aria-hidden="true"></i>
             <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Sign in with Google</button>
           </div>
-          <canvas id="brood-canvas" width="600" height="700"></canvas>
+          <canvas id="brood-canvas" width="400" height="500"></canvas>
         </div>
       <div>
         <label><input type="checkbox" id="view-style">Structural View</input></label>
