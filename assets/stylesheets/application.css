@@ -361,7 +361,7 @@ canvas {
   justify-content: center;
 }
 
-.author-info li:first-of-type {
+/*.author-info li:first-of-type {
   text-align: left;
   justify-content: flex-start;
 }
@@ -369,7 +369,7 @@ canvas {
 .author-info li:last-of-type {
   text-align: right;
   justify-content: flex-end;
-}
+}*/
 
 .author-info li:last-of-type .header-container {
   margin-left: 2rem;
