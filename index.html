@@ -15,16 +15,18 @@
     <!-- <div class="loading bar"></div> -->
     <span class="game">
       <ul class="author-info">
-        <li><a href="http://www.samaparl.com"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+        <!-- <li><a href="http://www.samaparl.com"><i class="fa fa-user" aria-hidden="true"></i></a></li>
         <li><a href="https://github.com/samparl"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/sam-parl-6a3a4040"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/sam-parl-6a3a4040"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li> -->
+        <li><button class="mdl-button mdl-js-button mdl-button--raised" id="high-scores">About the game</button></li>
+        <li><button disabled class="mdl-button mdl-js-button mdl-button--raised" id="main-auth-button">Sign in to save your score</button></li>
+
       </ul>
 
       <div class="page-header">
         <div class="title">Brood</div>
         <img src="assets/images/aliens/green/Smiley_green_alien_aaah.svg" class="logo" />
         <div class="subtitle">Play. Fight. Survive.</div>
-        <button id="high-scores">High Scores</button>
       </div>
 
       <div
@@ -42,35 +44,15 @@
             <div class="replay-message"></div>
             <i class="fa fa-refresh" aria-hidden="true"></i>
             <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Sign in with Google</button>
-            </div>
+          </div>
           <canvas id="brood-canvas" width="600" height="700"></canvas>
         </div>
       <div>
         <label><input type="checkbox" id="view-style">Structural View</input></label>
-        <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="main-auth-button">Sign in with Google</button>
 
       <script type="text/javascript" src="lib/bundle.js" charset="utf-8"></script>
 
     </span>
-
-    <br><br>
-    <hr width=200>
-    <br>
-
-    <div class="rules">
-      <h2>Rules</h2>
-      <ul>
-        <li><p>Defend your home by killing all the aliens that you can, but beware:
-          as night falls the aliens come in greater numbers.<p></li>
-
-        <li><p>Aliens can't stand to be around too many of their own kind. Place three
-          or more adjacent to one another and watch them die off!</p></li>
-        <li><p>Earn the respect neighbors by killing more aliens! Each alien is worth 10
-          respect.</p></li>
-        <li><p>Ricocheting projectile aliens off the walls is impressive! Every time
-          you bounce an alien off the wall you can expect another 5 respect.<p></li>
-      </ul>
-    </div>
 
     <br>
     <hr width=200>
